@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+    <form action="#" method="post">
+        <div>
+            <label for="email">Correo:</label>
+            <input id="email" required type="email" >
+        </div>
+        <div>
+            <label for="contrasenia">Contraseña</label>
+            <input id="contrasenia" required type="password">
+        </div>
+        <button type="button" onclick="login()">Iniciar sesión</button>
+    </form>
+    <script src="./js/script.js"></script>
+  
 </body>
+
 </html>
