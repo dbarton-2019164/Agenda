@@ -7,7 +7,7 @@ function login() {
         console.log("Permitido");
           window.location.href = './html/contactos.html';
     } else {
-        document.getElementById('denegado').classList.remove('labelOculto');
+        document.getElementById('denegado').classList.remove('ocultar');
         console.log("Denegado");
     }
 
