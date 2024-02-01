@@ -8,7 +8,7 @@ function login() {
           window.location.href = './html/contactos.html';
     } else {
         document.getElementById('denegado').classList.remove('ocultar');
-        console.log("Denegado");
+       alert('Credenciales incorrectas');
     }
 
 }
