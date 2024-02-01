@@ -5,8 +5,9 @@ function login() {
     var contrasenia = document.getElementById('contrasenia').value;
     if (email === user && contrasenia === password) {
         console.log("Permitido");
-          window.location.href = '../html/contactos.html';
+          window.location.href = './html/contactos.html';
     } else {
+        document.getElementById('denegado').classList.remove('labelOculto');
         console.log("Denegado");
     }
 
