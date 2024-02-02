@@ -1,7 +1,5 @@
 var listaDeFavoritos = [
     { nombre: "Emanuel Moreno", telefono: "44556611", correo: "emanuel@gmail.com" },
-    { nombre: "Juan García", telefono: "66994411", correo: "juan@gmail.com" },
-    { nombre: "Carlos Martinez", telefono: "13483487", correo: "carlos@gmail.com" },
     { nombre: "Ana Lopez", telefono: "77193622", correo: "ana@gmail.com" },
     { nombre: "Pedro Figueroa", telefono: "99431156", correo: "pedro@gmail.com" }
 ];
@@ -23,19 +21,15 @@ function mostrarContactos() {
 
         var textoContacto = document.createTextNode("Nombre: " + contacto.nombre + ", Teléfono: " + contacto.telefono);
 
-        var botonFavoritos = document.createElement("button");
-        botonFavoritos.textContent = "Añadir a favoritos";
-        botonFavoritos.type = "button";
 
         formulario.appendChild(textoContacto);
-        formulario.appendChild(botonFavoritos);
 
         li.appendChild(formulario);
 
         li.addEventListener("click", function (event) {
-            if (event.target !== botonFavoritos) {
+           
                 mostrarDetalles(index);
-            }
+            
         });
 
         listaElemento.appendChild(li);
