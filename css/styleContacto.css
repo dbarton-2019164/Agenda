@@ -19,7 +19,8 @@ ul {
     padding: 0;
 }
 
-li,button {
+li,
+button {
     margin-bottom: 15px;
     border: 1px solid #99aabb;
     padding: 15px;
@@ -43,15 +44,60 @@ input {
     margin-left: 10px;
 }
 
-a{
+a {
     text-decoration: none;
     color: #336699;
     font-weight: bold;
 }
 
-a:hover{
+a:hover {
     color: rgb(0, 133, 138);
 }
+
+img {
+    height: 65px;
+    width: 85px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto; /* Agregado para centrar el contenido horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Agregado para centrar el contenido verticalmente */
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
 
 @media screen and (max-width: 600px) {
     li {

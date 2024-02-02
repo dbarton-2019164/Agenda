@@ -48,4 +48,20 @@ function mostrarDetalles(index) {
     window.location.href = './detalles.html';
 }
 
+
+function abrirModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+function cerrarModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+        cerrarModal();
+    }
+}
+
 mostrarContactos();

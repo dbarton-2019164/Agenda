@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Contactos</title>
     <link rel="stylesheet" href="../css/styleContacto.css">
 </head>
+
 <body>
-
-    <h2>Lista de Contactos</h2>
-
+    <header>
+        <h2>Lista de Contactos</h2>
+        <img onclick="abrirModal()"
+            src="https://static.vecteezy.com/system/resources/previews/019/879/198/original/user-icon-on-transparent-background-free-png.png"
+            alt="user">
+    </header>
     <ul id="listaContactos">
-     
+
     </ul>
 
+    <div id="myModal" class="modal">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div class="modal-content" id="modalContent">
+            <h1>USUARIO</h1>
+            <label for="nombre">Nombre:</label>
+            <span id="nombre">Diego Barton</span>
+            <br>
+            <label for="correo">Correo:</label>
+            <span id="correo">correo@gmail.com</span>
+            <br>
+            <label for="numero">Número:</label>
+            <span id="numero">48956545</span>
+        </div>
+    </div>
     <a href="./nuevoContacto.html">Nuevo contacto</a>
     <a href="./favoritos.html">Favoritos</a>
     <script src="../js/scriptContacto.js"></script>
 </body>
+
 </html>
