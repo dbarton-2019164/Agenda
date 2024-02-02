@@ -1,5 +1,5 @@
 function login() {
-    const user = 'kinal@org.gt';
+    const user = 'correo@gmail.com';
     const password = '123';
     var email = document.getElementById('email').value;
     var contrasenia = document.getElementById('contrasenia').value;
