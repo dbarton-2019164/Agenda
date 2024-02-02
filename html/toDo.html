@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="../css/styleToDO.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Listado</h2>
+        <form id="todoForm">
+            <input type="text" id="taskInput"required>
+            <select id="priorityInput">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+            <button type="button" onclick="agregarTarea()">Agregar</button>
+        </form>
+        <ul id="taskList"></ul>
+        <a href="./contactos.html">Regresar</a>
+    </div>
+   
+    <script src="../js/scriptToDo.js"></script>
+</body>
+</html>
