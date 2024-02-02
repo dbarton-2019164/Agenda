@@ -8,6 +8,17 @@ var listaDeContactos = [
     { nombre: "Pedro Figueroa", telefono: "99431156", correo: "pedro@gmail.com" }
 ];
 
+
+
+function agregarContacto(contacto){
+    listaDeContactos.push(contacto);
+}
+
+function agregar(){
+    window.location.href = './nuevoContacto.html';  
+}
+
+
 function mostrarContactos() {
     var listaElemento = document.getElementById("listaContactos");
     listaElemento.innerHTML = "";
@@ -38,4 +49,7 @@ function mostrarContactos() {
     });
 }
 
+
 mostrarContactos();
+
+

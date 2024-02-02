@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo contacto</title>
+    <link rel="stylesheet" href="../css/styleNuevoContacto.css">
 </head>
+
 <body>
-    
+    <div id="contenedor">
+        <form action="#" method="post">
+            <div>
+                <label for="NombreContacto">Nombre:</label>
+                <input id="NombreContacto" required type="text">
+            </div>
+            <div>
+                <label for="num">Número:</label>
+                <input id="num" required type="tel">
+            </div>
+            <div>
+                <label for="correoContacto">Correo:</label>
+                <input id="correoContacto" required type="email">
+            </div>
+            <button type="button">Agregar</button>
+        </form>
+
+
+        <a href="./contactos.html">regresar</a>
+    </div>
 </body>
+
 </html>
