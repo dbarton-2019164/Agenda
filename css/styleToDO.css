@@ -80,3 +80,10 @@ a{
 a:hover{
     color: rgb(82, 140, 190);
 }
+
+
+@media screen and (max-width: 600px) {
+    li {
+        width: 100%;
+    }
+}
