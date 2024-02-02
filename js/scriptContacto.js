@@ -1,5 +1,3 @@
-
-
 var listaDeContactos = [
     { nombre: "Emanuel Moreno", telefono: "44556611", correo: "emanuel@gmail.com" },
     { nombre: "Juan García", telefono: "66994411", correo: "juan@gmail.com" },
@@ -8,48 +6,48 @@ var listaDeContactos = [
     { nombre: "Pedro Figueroa", telefono: "99431156", correo: "pedro@gmail.com" }
 ];
 
-
-
-function agregarContacto(contacto){
+function agregarContacto(contacto) {
     listaDeContactos.push(contacto);
 }
 
-function agregar(){
-    window.location.href = './nuevoContacto.html';  
+function agregar() {
+    window.location.href = './nuevoContacto.html';
 }
-
 
 function mostrarContactos() {
     var listaElemento = document.getElementById("listaContactos");
     listaElemento.innerHTML = "";
 
-    listaDeContactos.forEach(function (contacto) {
+    listaDeContactos.forEach(function (contacto, index) {
         var li = document.createElement("li");
-
 
         var formulario = document.createElement("form");
 
-
         var textoContacto = document.createTextNode("Nombre: " + contacto.nombre + ", Teléfono: " + contacto.telefono);
-
 
         var botonFavoritos = document.createElement("button");
         botonFavoritos.textContent = "Añadir a favoritos";
-        botonFavoritos.type = "submit";
-
+        botonFavoritos.type = "button";
 
         formulario.appendChild(textoContacto);
         formulario.appendChild(botonFavoritos);
 
-
         li.appendChild(formulario);
 
+        li.addEventListener("click", function (event) {
+            if (event.target !== botonFavoritos) {
+                mostrarDetalles(index);
+            }
+        });
 
         listaElemento.appendChild(li);
     });
 }
 
+function mostrarDetalles(index) {
+    localStorage.setItem('contactoSeleccionado', JSON.stringify(listaDeContactos[index]));
+
+    window.location.href = './detalles.html';
+}
 
 mostrarContactos();
-
-
